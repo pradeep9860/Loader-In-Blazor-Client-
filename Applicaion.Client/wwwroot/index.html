@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Applicaion</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <style type="text/css">
+        /*
+        *  Usage:
+        *
+             <div class="sk-double-bounce">
+               <div class="sk-child sk-double-bounce1"></div>
+               <div class="sk-child sk-double-bounce2"></div>
+             </div>
+        *
+        */
+        .sk-double-bounce {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: 20% auto;
+        }
+
+            .sk-double-bounce .sk-child {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #333;
+                opacity: 0.6;
+                position: absolute;
+                top: 0;
+                left: 0;
+                -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+                animation: sk-doubleBounce 2s infinite ease-in-out;
+            }
+
+            .sk-double-bounce .sk-double-bounce2 {
+                -webkit-animation-delay: -1.0s;
+                animation-delay: -1.0s;
+            }
+
+        @-webkit-keyframes sk-doubleBounce {
+            0%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes sk-doubleBounce {
+            0%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        .animate-background {
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+        }
+
+        @-webkit-keyframes Gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @-moz-keyframes Gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+    <app>
+        <div class="animate-background ">
+            <div class="sk-double-bounce">
+                <div class="sk-child sk-double-bounce1"></div>
+                <div class="sk-child sk-double-bounce2"></div> 
+            </div>
+        </div>
+    </app>
+
+    <script src="_framework/components.webassembly.js"></script>
+</body>
+</html>
